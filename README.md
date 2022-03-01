@@ -66,9 +66,9 @@ if (response == null) {
 }
 ```
 
-## Contributing
+## Extra
 
-Please see [CONTRIBUTING](CODE_OF_CONDUCT.md) for details.
+check Example app provided for further assistance
 
 ## Credits
 
