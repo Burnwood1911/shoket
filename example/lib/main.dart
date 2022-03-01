@@ -28,7 +28,7 @@ class PaymentScreen extends StatefulWidget {
 }
 
 class _PaymentScreenState extends State<PaymentScreen> {
-  final shoket = Shoket(apiKey: "sk_hwNLWTeLdwPbok");
+  final shoket = Shoket(apiKey: "apikey");
 
   final name = TextEditingController();
   final email = TextEditingController();
