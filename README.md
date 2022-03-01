@@ -16,14 +16,14 @@ In your pubspec.yaml file add:
 
 ```shell
 
-shoket: 0.0.1
+shoket: 0.0.3
 ```
 
 Import in your file:
 
 ```shell
-import"package:shoket/shoket.dart"
-
+import"package:shoket/shoket.dart";
+cd
 ```
 
 run flutter pub get
@@ -45,7 +45,7 @@ var paymentDetails = Payment(
                       amount: "1000",
                       customerName: "John DOe",
                       email: "johndoe@gmail.com",
-                      numberUsed: "0717000000",
+                      numberUsed: "255717000000",
                       channel: "halotel");
 
 ```

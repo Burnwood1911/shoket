@@ -53,7 +53,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
             TextField(
               controller: number,
               decoration: const InputDecoration(
-                  label: Text("Number"), hintText: "07xxxxxxxx"),
+                  label: Text("Number"), hintText: "2557xxxxxxxx"),
             ),
             TextField(
               controller: amount,
