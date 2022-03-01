@@ -16,14 +16,14 @@ In your pubspec.yaml file add:
 
 ```shell
 
-shoket: 0.0.3
+shoket: 0.0.4
 ```
 
 Import in your file:
 
 ```shell
 import"package:shoket/shoket.dart";
-cd
+
 ```
 
 run flutter pub get
