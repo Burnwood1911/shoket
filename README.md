@@ -19,6 +19,13 @@ In your pubspec.yaml file add:
 shoket: 0.0.1
 ```
 
+Import in your file:
+
+```shell
+import"package:shoket/shoket.dart"
+
+```
+
 run flutter pub get
 
 ### Usage
