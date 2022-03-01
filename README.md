@@ -17,14 +17,13 @@ In your pubspec.yaml file add:
 ```shell
 
 shoket: 0.0.1
-run flutter pub get
-
-
 ```
+
+run flutter pub get
 
 ### Usage
 
-1. Create a Shocket instance by calling the constructor Shoket() The constructor accepts an API KEY as parameter
+1. Create a Shoket instance by calling the constructor Shoket() The constructor accepts an API KEY as parameter
    It returns an instance of Shoket which we then call the async method .charge() or .verify() on.
 
 ```js
@@ -47,7 +46,7 @@ var paymentDetails = Payment(
 3. Get the response by calling .charge() method passing paymentDetails oject as paramenter. NOTE chargeresponse can be null
 
 ```js
-final ChargeResponse? response = await shoket.charge();
+final ChargeResponse? response = await shoket.charge(paymentDetails);
 
 ```
 
