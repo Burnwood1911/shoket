@@ -1,7 +1,7 @@
 name: shoket
-description: A new Flutter package project.
+description: A wrapper for shoket payment api.
 version: 0.0.1
-homepage:
+homepage: https://github.com/Burnwood1911/shoket
 
 environment:
   sdk: ">=2.15.1 <3.0.0"
@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:

@@ -1,39 +1,80 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Shoket Flutter Wrapper
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+A simple Flutter wrapper for the shoket payment API, for more information on the API visit [Shoket Official website](https://developers.shoket.co/).
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+## Getting Started
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+### Prerequisites
 
-## Features
+- Ensure you have your API keys.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+### Installation
 
-## Getting started
+- Add the dependency
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+In your pubspec.yaml file add:
 
-## Usage
+```shell
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+shoket: 0.0.1
+run flutter pub get
 
-```dart
-const like = 'sample';
+
 ```
 
-## Additional information
+### Usage
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+1. Create a Shocket instance by calling the constructor Shoket() The constructor accepts an API KEY as parameter
+   It returns an instance of Shoket which we then call the async method .charge() or .verify() on.
+
+```js
+final shoket = Shoket(apiKey: "apiKey");
+
+```
+
+2. create a payment object with the payment details
+
+```js
+var paymentDetails = Payment(
+                      amount: "1000",
+                      customerName: "John DOe",
+                      email: "johndoe@gmail.com",
+                      numberUsed: "0717000000",
+                      channel: "halotel");
+
+```
+
+3. Get the response by calling .charge() method passing paymentDetails oject as paramenter. NOTE chargeresponse can be null
+
+```js
+final ChargeResponse? response = await shoket.charge();
+
+```
+
+4. Handle the response
+
+```js
+if (response == null) {
+  // the transaction failed
+} else {
+  var status = response.status;
+  if (status == "success") {
+    // provide value to customer
+  } else {
+    // check message
+    print(response.message);
+  }
+}
+```
+
+## Contributing
+
+Please see [CONTRIBUTING](CODE_OF_CONDUCT.md) for details.
+
+## Credits
+
+- [Alex Rossi](https://github.com/burnwood1911)
+
+## License
+
+This project is licensed under the [MIT](LICENSE.md) License.
