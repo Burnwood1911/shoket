@@ -50,7 +50,7 @@ var paymentDetails = Payment(
 
 ```
 
-3. Get the response by calling `.charge()` method passing `paymentDetails` oject as paramenter. NOTE chargeresponse can be null
+3. Get the response by calling `.charge()` method passing `paymentDetails` object as a parameter. NOTE chargeresponse can be null
 
 ```js
 final ChargeResponse? response = await shoket.charge(paymentDetails);
