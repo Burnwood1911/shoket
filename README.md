@@ -46,7 +46,7 @@ var paymentDetails = Payment(
                       customerName: "John DOe",
                       email: "johndoe@gmail.com",
                       numberUsed: "255717000000",
-                      channel: "halotel");
+                      channel: "Halotel");
 
 ```
 
