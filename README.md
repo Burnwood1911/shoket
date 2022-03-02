@@ -30,15 +30,15 @@ run flutter pub get
 
 ### Usage
 
-1. Create a Shoket instance by calling the constructor Shoket() The constructor accepts an API KEY as parameter
-   It returns an instance of Shoket which we then call the async method .charge() or .verify() on.
+1. Create a Shoket instance by calling the constructor `Shoket()`. The constructor accepts an API KEY as parameter.
+   It returns an instance of Shoket which we then call the async method `.charge()` or `.verify()` on.
 
 ```js
 final shoket = Shoket(apiKey: "apiKey");
 
 ```
 
-2. create a payment object with the payment details
+2. Create a payment object with the payment details
 
 ```js
 var paymentDetails = Payment(
@@ -46,11 +46,11 @@ var paymentDetails = Payment(
                       customerName: "John DOe",
                       email: "johndoe@gmail.com",
                       numberUsed: "255717000000",
-                      channel: "halotel");
+                      channel: "Halotel");
 
 ```
 
-3. Get the response by calling .charge() method passing paymentDetails oject as paramenter. NOTE chargeresponse can be null
+3. Get the response by calling `.charge()` method passing `paymentDetails` object as a parameter. NOTE chargeresponse can be null
 
 ```js
 final ChargeResponse? response = await shoket.charge(paymentDetails);
@@ -75,7 +75,7 @@ if (response == null) {
 
 ## Extra
 
-check Example app provided for further assistance
+Check example app provided for further assistance
 
 ## Credits
 
