@@ -64,11 +64,20 @@ class _PaymentScreenState extends State<PaymentScreen> {
             ),
             ElevatedButton(
                 onPressed: () async {
+                      String userNumber = number.text;
+    if (userNumber[0] == "0") {
+      String checkedNumber = userNumber.replaceFirst("0", "255");
+      userNumber = checkedNumber;
+    }
+    if (userNumber[0] == "+") {
+      String checkedNumber = userNumber.substring(1);
+      userNumber = checkedNumber;
+    }
                   ChargeResponse? result = await shoket.charge(Payment(
                       amount: amount.text,
                       customerName: name.text,
                       email: email.text,
-                      numberUsed: number.text,
+                      numberUsed: userNumber,
                       channel: "halotel"));
 
                   if (result != null) {
