@@ -15,12 +15,14 @@ class Shoket {
   Future<ChargeResponse?> charge(Payment payment) async {
     try {
       var response = await client.post(
-          Uri.parse("https://api.shoket.co/v1/charge/"),
-          body: paymentToJson(payment),
-          headers: {
-            'Authorization': 'Bearer ' + apiKey,
-            'Content-Type': 'application/json'
-          });
+        Uri.parse("https://api.shoket.co/v1/charge/"),
+        body: paymentToJson(payment),
+        headers: {
+          'Authorization': 'Bearer ' + apiKey,
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+      );
 
       if (response.statusCode == 201) {
         ChargeResponse chargeResponse = chargeResponseFromJson(response.body);
@@ -36,11 +38,14 @@ class Shoket {
 
   Future<VerifyResponse?> verify(String id) async {
     try {
-      var response = await client
-          .get(Uri.parse("https://api.shoket.co/v1/verify/" + id), headers: {
-        'Authorization': 'Bearer ' + apiKey,
-        'Content-Type': 'application/json'
-      });
+      var response = await client.get(
+        Uri.parse("https://api.shoket.co/v1/verify/" + id),
+        headers: {
+          'Authorization': 'Bearer ' + apiKey,
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+      );
 
       if (response.statusCode == 200) {
         VerifyResponse verifyResponse = verifyResponseFromJson(response.body);
